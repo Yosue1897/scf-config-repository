@@ -1,4 +1,4 @@
-# Global configuration for account service
+# Global configuration for all services, there's a property file for each service.
 server:
   port: 0
 
@@ -28,6 +28,3 @@ spring:
     schemas: transaction
     url: jdbc:postgresql://localhost:5436/transaction-service
     locations: classpath:/db/migration
-
-topics:
-  topic-name-account: account-topic
