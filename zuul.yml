@@ -9,7 +9,7 @@ zuul:
   routes:
     account-service:
       path: /api/account/**
-      serviceId: account-service
+      url: account-service
       
 zuul:
   routes:
