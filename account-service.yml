@@ -1,3 +1,37 @@
 # Put application-specific config here (application name: account-service)
+server:
+  port: 0
+
+spring:
+  kafka:
+#    consumer:
+#      bootstrap-servers: localhost:9092
+#      group-id: transaction_id
+#      auto-offset-reset: earliest
+#      key-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+#      value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5436/transaction-service
+    username: postgres
+    password: postgres
+    schemas: transaction
+  jpa:
+    show-sql: true
+  flyway:
+    user: postgres
+    password: postgres
+    schemas: transaction
+    url: jdbc:postgresql://localhost:5436/transaction-service
+    locations: classpath:/db/migration
+
 topics:
   topic-name-account: account-topic
+  #topic-name-transaction-valid: transaction-valid-topic
+  #topic-name-transaction-invalid: transaction-invalid-topic
+
+
