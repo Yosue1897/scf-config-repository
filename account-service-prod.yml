@@ -1,0 +1,3 @@
+# Put application+profile-specific config here (app name: account-service) (profile name: prod)
+topics:
+  topic-name-account: account-prod-topic
