@@ -6,10 +6,9 @@ spring:
     name: transaction-api-proxy
   
 zuul:
-  prefix: /api
   routes:
     account-service:
-      path: /account/**
+      path: /api/account/**
       
 zuul:
   routes:
