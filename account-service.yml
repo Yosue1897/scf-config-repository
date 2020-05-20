@@ -1,0 +1,3 @@
+# Put application-specific config here (application name: account-service)
+topics:
+  topic-name-account: account-topic
