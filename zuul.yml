@@ -1,9 +1,9 @@
-spring:
-  application:
-    name: gateway
-
 server:
   port: 8080
+  
+spring:
+  application:
+    name: transaction-api-proxy
   
 zuul:
   prefix: /api
